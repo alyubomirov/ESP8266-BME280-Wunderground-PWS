@@ -3,6 +3,6 @@ Personal weather station based on ESP8266 and BME280 reporting to WUnderground.
 
 Replace *wifiSsid,*wifiPassword,*stationId,*stationKey with yours.
 
-BME280 uses the hardware pins D1,D0 for I2C.
+BME280 uses the hardware pins IO5,IO4 for I2C.
 
-Connect D0 to RST for DeepSleep to work properly.
+Connect IO16 to RST for DeepSleep to work.
