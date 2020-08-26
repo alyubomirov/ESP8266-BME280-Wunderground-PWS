@@ -151,7 +151,7 @@ void setup() {
       }
   delay(2500);
     
-//Connect Int016 to RST to work properly !
+//Connect IO16(D0) to RST to work properly !
   Serial.print(F("Sleeping..."));
   ESP.deepSleep(sleepTimeS * 1000000);
 }
