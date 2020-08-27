@@ -76,7 +76,7 @@ float temp,hum,pres,dewpF;
 void setup() {
   
   Serial.begin(115200);
-  delay(100);
+  while(!Serial) {} // Wait
 
   Wire.begin();
   while(!bme.begin())
