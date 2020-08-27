@@ -62,7 +62,6 @@ BME280I2C::Settings settings(
 BME280I2C bme(settings);
 // client = manager of the HTTPS connection to the web site.
 WiFiClientSecure client;
-#define SEALEVELPRESSURE_HPA (1013.25)
 
 const int sleepTimeS = 300; //18000 for Half hour, 300 for 5 minutes etc.
 
@@ -77,7 +76,7 @@ float temp,hum,pres,dewpF;
 void setup() {
   
   Serial.begin(115200);
-  while(!Serial) {} // Wait
+  delay(100);
 
   Wire.begin();
   while(!bme.begin())
